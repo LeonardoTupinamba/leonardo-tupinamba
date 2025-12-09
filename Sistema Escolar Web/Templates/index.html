@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Sistema Escolar{% endblock %}</title>
+</head>
+<body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <header>
+        <img src="{{ url_for('static', filename='img/logoml_jpg.jpg') }}" alt="Logo da Escola" class="avatar">
+        <h1>SISCOLA</h1>
+        <h1>Bem-vindo ao Sistema Escolar Monteiro Lobato</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/alunos">ALUNOS</a></li>
+            <li><a href="/professores">PROFESSORES</a></li>
+        </ul>
+        
+    </nav>
+     
+    <main>{% block content %}{% endblock %}</main>
+    <footer><p>&copy; 2025 Leonardo</p></footer>
+</body>
+</html>
